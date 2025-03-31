@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme{
+    --color-primary: oklch(0.637 0.237 25.331)
+}
+@layer base{
+    body{
+        @apply min-h-screen text-gray-800 dark:text-gray-50 dark:bg-neutral-950;
+        font-size: 1rem;
+        font-family: 'Open sans','Roboto','Arial';
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply mb-4 font-bold;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    h4{
+        font-size:1.4rem;
+    }
+    h5{
+        font-size: 1.2rem;
+    }
+    h6{
+        font-size: 1rem;
+    }
+    button{
+        @apply flex items-center justify-center text-center transition-all duration-150 ease-in-out px-4 py-2 
+        cursor-pointer rounded-lg gap-4
+    }
+
+}
