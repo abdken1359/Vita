@@ -5,12 +5,12 @@
 }
 @layer base{
     body{
-        @apply min-h-screen text-gray-800 dark:text-gray-50 dark:bg-neutral-950;
+        @apply min-h-screen overflow-x-hidden text-neutral-950 dark:text-gray-50 dark:bg-neutral-950;
         font-size: 1rem;
-        font-family: 'Open sans','Roboto','Arial';
+        font-family: 'Open sans','Inter','Arial';
     }
     h1,h2,h3,h4,h5,h6{
-        @apply mb-4 font-bold;
+        @apply mb-4 font-bold text-neutral-950 dark:text-gray-50;
     }
     h1{
         font-size: 2rem;
@@ -30,9 +30,29 @@
     h6{
         font-size: 1rem;
     }
-    button{
+    button,.button{
         @apply flex items-center justify-center text-center transition-all duration-150 ease-in-out px-4 py-2 
-        cursor-pointer rounded-lg gap-4
+        cursor-pointer rounded-lg gap-4 
+    }
+    nav{
+        @apply flex items-center h-16
+    }
+    img{
+        @apply w-full h-auto object-cover object-center block mx-auto;
     }
 
+}
+@layer components{
+    .hero-root{
+        @apply flex items-center  min-h-[90vh];
+    }
+    .v-container{
+        @apply container mx-auto p-4
+    }
+    .hero-container{
+        @apply flex items-center justify-center flex-col-reverse md:flex-row gap-4;
+    }
+    .hero-item{
+        @apply w-full text-center lg:text-left lg:w-1/2;
+    }
 }
