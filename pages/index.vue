@@ -1,6 +1,10 @@
 <template>
     <div>
+     
+
       <ContentMainhero/>
+      <ContentMainFeatures/>
+    
     </div>
 </template>
 <script setup lang="ts">
@@ -12,6 +16,5 @@ useHead({
     content:'Welcome to Vita, your absolutely free resume builder. Choose amongst many templates, and download your resume in PDF format'
   }]
 })
-const isDark=useDark()
-const toggle=useToggle(isDark);
+
 </script>
