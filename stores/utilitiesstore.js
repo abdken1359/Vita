@@ -15,10 +15,20 @@ export const useUtilitiesStore=defineStore('Utilities',()=>{
         },
         {
             id:5,name:'Support',to:'/',active:true,
+        },
+        {
+            id:6,name:'Templates',to:'/',active:false,
+        },
+        {
+            id:7,name:'About',to:'/',active:false,
         }
     ])
+    const temporalNavLinks=computed(()=>{
+        return navLinks.value.filter(n=>n.name==='Templates'||n.name==='About')
+    })
     return{
         navLinks,
-        isNavbarActive
+        isNavbarActive,
+        temporalNavLinks
     }
 })

@@ -85,12 +85,12 @@
 }
 @layer base{
     body{
-        @apply min-h-screen overflow-x-hidden text-neutral-900 dark:text-gray-50 dark:bg-neutral-900;
+        @apply min-h-screen overflow-x-hidden text-gray-800 dark:text-gray-100 dark:bg-black;
         font-size: 1rem;
-        font-family: 'Open sans','Inter','Arial';
+        font-family: 'Inter','Inter','Arial';
     }
     h1,h2,h3,h4,h5,h6{
-        @apply mb-4 font-bold text-neutral-950 dark:text-gray-50;
+        @apply mb-4 font-bold text-gray-800 dark:text-gray-50;
     }
     h1{
         font-size: 2rem;
@@ -115,8 +115,8 @@
         cursor-pointer rounded-lg gap-4 
     }
     nav{
-        @apply bg-white dark:bg-neutral-900 flex items-center h-16  px-6 md:px-10 relative sticky top-0
-        dark:shadow-sm dark:shadow-red-100
+        @apply bg-white dark:bg-black flex items-center h-16  px-6 md:px-10 relative sticky top-0
+        border-b border-gray-200 dark:border-neutral-900
         ; 
     }
     img{
@@ -138,7 +138,7 @@
         @apply w-full text-center lg:text-left lg:w-1/2;
     }
     .navLink{
-        @apply mx-4 transition-all duration-150 ease-in-out hover:text-red-500 dark:hover:text-red-400 
+        @apply mx-4 transition-all duration-150 ease-in-out hover:text-teal-500 dark:hover:text-teal-400 
     }
 }
 @layer utilities{

@@ -6,9 +6,9 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
     <template v-for="f in features" :key="f.id">
-     <article class="p-4 border-2 border-gray-200 hover:border-blue-500 rounded-lg">
-        <NuxtImg :src="f.image" class="w-20 mr-auto "/>
-        <h4 class="my-5 text-red-500 dark:text-red-400">{{ f.title }}</h4>
+     <article class="p-4 shadow-2xl mb-10 bg-teal-500 text-white  rounded-lg">
+        <NuxtImg :src="f.image" class="w-20 mr-auto hidden"/>
+        <h4 class="my-5 text-white">{{ f.title }}</h4>
         <p>{{ f.text }}</p>
 
      </article>

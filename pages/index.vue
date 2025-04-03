@@ -3,7 +3,9 @@
      
 
       <ContentMainhero/>
+      <div class="hidden">
       <ContentMainFeatures/>
+    </div>
     
     </div>
 </template>
