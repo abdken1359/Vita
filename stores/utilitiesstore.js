@@ -17,7 +17,7 @@ export const useUtilitiesStore=defineStore('Utilities',()=>{
             id:5,name:'Support',to:'/',active:true,
         },
         {
-            id:6,name:'Templates',to:'/',active:false,
+            id:6,name:'Templates',to:'/templates/',active:false,
         },
         {
             id:7,name:'About',to:'/',active:false,
