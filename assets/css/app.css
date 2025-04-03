@@ -1,105 +1,98 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@media print {
-    /* Reset body margins */
-    body {
-      margin: 0;
-      padding: 0;
-      font-size: 12pt;
-      line-height: 1.4;
-    }
-  
-    /* Ensure content is displayed correctly */
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-    }
-  
-    /* Remove background colors for print (to save ink) */
-    * {
-      background: transparent !important;
-      color: #000 !important; /* Ensuring text is always black */
-      box-shadow: none !important;
-    }
-  
-    /* Hide unnecessary elements */
-    header, footer, nav, .no-print {
-      display: none !important;  /* Hides elements like nav bars or footers */
-    }
-  
-    /* Ensure links are visible but without underlines for print */
-    a {
-      text-decoration: none;
-      color: #000;  /* Set links to black color */
-    }
-  
-    /* Page breaks */
-    .page-break {
-      page-break-before: always;
-    }
-  
-    /* Adjust tables for print */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-  
-    table, th, td {
-      border: 1px solid #000;
-    }
-  
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-  
-    /* Adjust images */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    /* Pagination for longer documents */
-    @page {
-      margin: 1cm;
-    }
-  
-    /* Add padding to the content for better spacing */
-    .content {
-      padding: 1cm;
-    }
-  
-    /* Avoid unnecessary extra space at the bottom */
-    footer {
-      page-break-after: always;
-    }
-  
-    /* Adjust for long content on a single page */
-    .no-page-break {
-      page-break-inside: avoid;
-    }
+/*@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.4;
   }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid #000;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+
+  .content {
+    padding: 1cm;
+  }
+
+  footer {
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+}*/
+
 @theme{
     --color-primary: oklch(0.637 0.237 25.331)
 }
 @layer base{
+  ::selection{
+    @apply bg-sky-600 text-white
+  }
     body{
         @apply min-h-screen overflow-x-hidden text-gray-800 dark:text-gray-100 dark:bg-black;
         font-size: 1rem;
-        font-family: 'Inter','Inter','Arial';
+        font-family: 'Inter','Roboto','Arial';
     }
     h1,h2,h3,h4,h5,h6{
-        @apply mb-4 font-bold text-gray-800 dark:text-gray-50;
+        @apply mb-4 font-bold text-gray-800 dark:text-gray-100;
+        
     }
     h1{
         font-size: 2rem;
     }
     h2{
-        font-size: 1.8rem;
+        font-size: 1.812rem;
     }
     h3{
-        font-size: 1.6rem;
+        font-size: 1.62rem;
     }
     h4{
         font-size:1.4rem;
@@ -138,7 +131,8 @@
         @apply w-full text-center lg:text-left lg:w-1/2;
     }
     .navLink{
-        @apply mx-4 transition-all duration-150 ease-in-out hover:text-teal-500 dark:hover:text-teal-400 
+        @apply mx-4 transition-all duration-150 ease-in-out hover:text-teal-500 dark:hover:text-teal-300 
+
     }
 }
 @layer utilities{
