@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6{
     <div class="v-container my-10 overflow-x-auto">
     <section id="resume" class=" flex items-center border">
         <div class="w-1/3 h-[90vh] bg-amber-100 p-4 print:bg-amber-100 print:w-1/3 print:p-4">
-                   <NuxtImg class="rounded-full w-2/3" alt="User Image"
+                   <img class="rounded-full w-2/3" alt="User Image"
                     src="https://images.generated.photos/9Tftht5baZArU-cPxswpaZ-k1kX-hY_I_2Ct9eQrfCI/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTQ1NjYzLmpwZw.jpg"/>
         
 
